@@ -9,7 +9,7 @@ Requires at least: 5.6
 Requires PHP:      7.4
 Author: Muhammmad Reza Heidary
 Author URI: https://www.linkedin.com/in/muhammad-reza-heidary/
-License: GPL v2 or later
+License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Update URI: https://github.com/MuhammadRezaHeidary/mekatron-banner
  */

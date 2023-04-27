@@ -36,3 +36,30 @@ This program comes with ABSOLUTELY NO WARRANTY.
 This is free software, and you are welcome to redistribute it
 under certain conditions.
  */
+
+define('MEKATRON_BANNER_IMAGES_PATH',plugin_dir_url(__FILE__).'assets/images/');
+
+function mekatron_show_banner() {
+    $mekatron_banner_url = MEKATRON_BANNER_IMAGES_PATH.'mekatron.jpg';
+    $mekatron_banner_forward_link = 'https://mekatronik.ir/';
+    ?>
+    <style>
+        a.mekatron-banner {
+            display: block;
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            z-index: 99;
+        }
+        img.mekatron-banner-container {
+            border-radius: 8px;
+            box-shadow: 0 3px 5px #00000088;
+        }
+    </style>
+    <a href="<?php echo $mekatron_banner_forward_link;?>" class="mekatron-banner" target="_blank">
+        <img class="mekatron-banner-container" src="<?php echo $mekatron_banner_url;?>" alt="mekatronik" width="300px" height="">
+    </a>
+    <?php
+}
+
+add_action('wp_footer', 'mekatron_show_banner');
